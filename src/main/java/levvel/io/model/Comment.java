@@ -6,11 +6,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 @Data
-public class Blog {
-
+public class Comment {
     @Id
     String id;
 
@@ -19,10 +17,6 @@ public class Blog {
 
     @LastModifiedDate
     private LocalDateTime lastModifiedDate;
-
-    String author;
-    String title;
-    String text;
-
-    public ArrayList<Comment> comments = new ArrayList<Comment>();
+    
+    String comment;
 }
